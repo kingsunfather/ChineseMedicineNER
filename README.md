@@ -74,6 +74,6 @@ Python包依赖：
 
 ## 4. 注意事项
 
-1. 模型使用了RoBERTa-large的预训练参数，下载地址为：https://github.com/ymcui/Chinese-BERT-wwm。  
+1. 模型使用了RoBERTa-large的预训练参数，下载地址为：https://github.com/ymcui/Chinese-BERT-wwm  
 下载解压后将文件放在`user_data/model_data`目录下，并将`bert_config.json`文件重命名为`config.json`
 
