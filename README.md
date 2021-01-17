@@ -40,18 +40,15 @@
 ### 2.3 训练和推理
 
 训练的时候，这里定义了三个损失，分别是：开始位置损失、结束位置损失和实体配对损失。
-$$
-L_s = {\rm Cross\_Entropy}(P_s, Y_s) \\
-L_e = {\rm Cross\_Entropy}(P_e, Y_e) \\
-L_{span} = {\rm Cross\_Entropy}(P_{span}, Y_{span})
-$$
+
+L_s = Cross_Entropy(P_s, Y_s) 
+L_e = Cross_Entropy(P_e, Y_e) 
+L_{span} = Cross_Entropy(P_{span}, Y_{span})
 
 
 三个损失相加得到最终训练时的损失函数
-$$
 L = L_s + L_e + L_{span}
-$$
-推理时，对于某个起始位置$s_i$，在候选的所有结束位置中，选取配对概率最大的结束位置与其组成一个实体。
+推理时，对于某个起始位置s_i，在候选的所有结束位置中，选取配对概率最大的结束位置与其组成一个实体。
 
 
 
@@ -77,5 +74,6 @@ Python包依赖：
 
 ## 4. 注意事项
 
-1. 模型使用了RoBERTa-large的预训练参数，下载地址为：https://github.com/ymcui/Chinese-BERT-wwm。下载解压后将文件放在`user_data/model_data`目录下，并将`bert_config.json`文件重命名为`config.json`
+1. 模型使用了RoBERTa-large的预训练参数，下载地址为：https://github.com/ymcui/Chinese-BERT-wwm。  
+下载解压后将文件放在`user_data/model_data`目录下，并将`bert_config.json`文件重命名为`config.json`
 
